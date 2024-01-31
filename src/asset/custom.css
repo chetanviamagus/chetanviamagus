@@ -1,0 +1,639 @@
+/* Font-Family  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html:is(.dark) {
+  @apply bg-primary-electron-blue-100;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+  /* background: #eaebff;
+  border-radius: 10px; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  /* border: 3px solid #eaebff; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3e4a;
+}
+
+.p-placeholder {
+  margin-right: 8px !important;
+}
+
+/* Dropdown */
+.p-dropdown .p-highlight {
+  background: #f2fcfd;
+}
+
+.p-dropdown-item {
+  padding: 0.3rem 1rem;
+}
+
+.p-dropdown-item:hover {
+  @apply bg-dark-neutral-gray-300;
+}
+
+/* AutoComplete */
+.p-autocomplete .p-highlight {
+  background: #f2fcfd;
+}
+
+.p-autocomplete-item {
+  padding: 0.3rem 1rem;
+}
+
+.p-autocomplete-item:hover {
+  background: #f0e8f2;
+}
+
+.p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
+  width: 10px;
+  height: 10px;
+  transition-duration: 0.2s;
+  background-color: white;
+  /* border: 2px solid white; */
+  padding: 0;
+  margin-left: 4px;
+  margin-top: 0px;
+}
+
+/* Otp Box */
+.styles_react-code-input-container__tpiKG {
+  @apply !w-full;
+  @apply !relative;
+}
+
+.styles_react-code-input__CRulA > input:first-child {
+  @apply !rounded-lg;
+}
+
+.styles_react-code-input__CRulA > input:last-child {
+  @apply !rounded-lg;
+  @apply !mr-0;
+}
+
+.styles_react-code-input__CRulA > input {
+  @apply !h-10;
+  @apply !w-64;
+  @apply !mr-2;
+  /* @apply  !border-primary-100; */
+  @apply !text-sm;
+  /* @apply  !text-OTPTextColor; */
+  @apply !rounded-lg;
+  @apply !border-solid;
+  @apply !border-r;
+  @apply !border-l;
+  @apply !text-center;
+  @apply !box-border;
+  -webkit-appearance: initial;
+  /* caret-color: #000000; */
+}
+
+/* Screen container background */
+.screen-bg {
+  background-color: #191e26;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+/* Toast Message */
+.p-toast-message-icon {
+  display: none;
+}
+
+.p-toast-icon-close {
+  display: none;
+}
+
+/* Loader */
+span[class^="css"] {
+  @apply !h-12.5;
+  @apply !w-12.5;
+}
+
+span[class^="css"] span[class^="css"] {
+  @apply !bg-primary-electron-blue-900;
+  @apply !h-3.752;
+  @apply !w-1;
+}
+
+/* Skeleton */
+
+.p-skeleton::after {
+  background: white;
+  opacity: 0.3;
+}
+
+/* Skeleton */
+.p-skeleton {
+  @apply !bg-primary-gray-200;
+}
+
+.modal-overlay-color {
+  background-color: rgba(97, 97, 144, 0.6) !important;
+}
+
+/* 
+.modal-overlay-color {
+  background-color: rgb(25 30 38 / 60%);
+} */
+
+/* InputNumber */
+
+.p-inputnumber {
+  display: inherit;
+}
+
+/* Button */
+button[color="gradient-blue"] {
+  position: relative;
+  background-image: linear-gradient(271deg, #0f6dc6 1.08%, #06447e 49.97%, #0f6dc6 98.87%);
+  transition: all 0.5s ease-in-out;
+}
+
+button[color="gradient-blue"] > .p-button-label,
+button[color="gradient-blue"] > img {
+  position: absolute;
+
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[color="gradient-blue"] > .p-button-label {
+  width: 100%;
+  height: 100%;
+}
+
+button[color="gradient-blue"]:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-image: linear-gradient(271deg, #06447e 1.08%, #0f6dc6 49.97%, #06447e 98.87%);
+  opacity: 0;
+  box-sizing: border-box;
+  height: 36px;
+  transition: all 0.5s ease;
+}
+
+button[color="gradient-blue"]:hover:after,
+button[color="gradient-blue"]:focus:after {
+  opacity: 1;
+}
+
+pre {
+  white-space: normal !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+.react-flow__attribution {
+  display: none !important;
+}
+
+.chat-diagram .react-flow,
+.chat-diagram .react-flow__viewport {
+  @apply pointer-events-none;
+}
+
+/* custom avatar group */
+.p-avatar img {
+  object-fit: cover;
+}
+
+.search-bg {
+  background: url("../asset/img/icons/sparkless.svg") 14px 14px no-repeat;
+}
+
+/* Tree Table */
+
+.p-treetable {
+  @apply overflow-hidden rounded-md;
+}
+
+.p-treetable .p-checkbox .p-checkbox-box.p-highlight,
+.p-treetable .p-checkbox .p-checkbox-box.p-indeterminate {
+  @apply bg-transparent font-semibold text-dark-neutral-gray-800;
+}
+
+.p-treetable tbody .p-checkbox .p-checkbox-box {
+  @apply mr-5 h-6 w-6 rounded-lg border-2 border-dark-neutral-gray-300 bg-transparent text-dark-neutral-gray-300;
+}
+
+.p-treetable .p-checkbox-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-treetable .p-checkbox {
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.p-treetable-thead {
+  @apply rounded-t-md border-b border-b-dark-neutral-gray-300;
+  background: #23282f;
+}
+
+.p-treetable-tbody > tr {
+  background-color: #1d222a;
+  @apply border-b border-b-dark-neutral-gray-300;
+}
+
+tr.table-tree-leaf-child-row {
+  background-color: #12151b;
+  @apply border-b border-b-dark-neutral-gray-300;
+}
+
+.p-treetable tr:is(.read-only) .p-checkbox-box {
+  display: none;
+}
+
+.p-treetable tr.table-tree-leaf-child-row:is(.read-only) .first-col {
+  @apply ml-3;
+}
+
+.p-treetable tr {
+  @apply h-9;
+}
+
+.p-treetable-thead th {
+  @apply text-left text-body-copy-2 font-semibold;
+}
+
+.p-treetable th,
+.p-treetable td {
+  @apply px-6 text-body-copy-2;
+}
+
+.p-treetable .p-treetable-toggler-icon {
+  @apply hidden;
+}
+
+/* Dialog */
+
+.slide-dialog-modal .p-dialog-content {
+  @apply p-6;
+}
+
+.no-mask.p-dialog-mask {
+  background-color: transparent !important;
+}
+
+.p-dialog {
+  @apply max-h-full;
+}
+
+.p-dialog-right .p-dialog {
+  @apply m-0;
+}
+
+.p-tooltip {
+  @apply max-w-65 p-3 text-dark-neutral-gray-100;
+}
+
+/* .p-tooltip-text {
+  @apply p-3;
+} */
+
+.p-tooltip.p-tooltip-left,
+.p-tooltip.p-tooltip-right {
+  padding: 12px;
+}
+
+.p-tooltip.p-tooltip-bottom,
+.p-tooltip.p-tooltip-top {
+  padding: 12px;
+}
+
+.p-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.p-tooltip-right .p-tooltip-arrow {
+  top: 50%;
+  left: -16px;
+  margin-top: -8px;
+  border-width: 8px 8px 8px 8px;
+  transform: rotate(90deg);
+}
+
+.p-tooltip-left .p-tooltip-arrow {
+  top: 50%;
+  right: -16px;
+  margin-top: -8px;
+  border-width: 8px 8px 8px 8px;
+  transform: rotate(270deg);
+}
+
+.p-tooltip-top .p-tooltip-arrow {
+  bottom: -8px;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px 8px 0;
+}
+
+.p-tooltip-bottom .p-tooltip-arrow {
+  top: -8px;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 0 8px 8px;
+}
+
+.p-tooltip .p-tooltip-arrow {
+  border-top-color: #fff;
+}
+
+.cuboctahedron-path {
+  fill: #fff;
+  /* Customize the color as needed */
+}
+
+.react-flow__edge-text {
+  font-size: 7px !important;
+}
+
+/* File Upload Component  */
+.p-fileupload-content {
+  display: none;
+}
+
+.p-menu-overlay {
+  @apply rounded-sm border-b border-dark-neutral-gray-300 bg-dark-neutral-gray-1000 py-3 text-dark-neutral-gray-100;
+}
+
+.p-menuitem {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(20, 21, 25, 0.3);
+}
+
+.p-menuitem:last-child {
+  border-bottom: none;
+}
+
+.p-menuitem:hover {
+  @apply bg-dark-neutral-gray-900 text-black;
+}
+
+/* Neubird Citation */
+.nbc {
+  @apply inline-block h-4 w-4 -translate-y-0.5 transform cursor-pointer rounded-full bg-primary-electron-blue-700 text-center text-body-copy-3 leading-4;
+}
+
+/* Accordion styles */
+.p-accordion-toggle-icon {
+  @apply hidden;
+}
+
+.p-accordion-header-link {
+  @apply w-full;
+}
+
+.primary .p-accordion-tab {
+  @apply mb-1.5 rounded-md border border-dark-neutral-gray-300;
+}
+
+.hexagon {
+  display: flex;
+  overflow: visible;
+  -webkit-clip-path: polygon(
+    45% 1.33975%,
+    46.5798% 0.60307%,
+    48.26352% 0.15192%,
+    50% 0%,
+    51.73648% 0.15192%,
+    53.4202% 0.60307%,
+    55% 1.33975%,
+    89.64102% 21.33975%,
+    91.06889% 22.33956%,
+    92.30146% 23.57212%,
+    93.30127% 25%,
+    94.03794% 26.5798%,
+    94.48909% 28.26352%,
+    94.64102% 30%,
+    94.64102% 70%,
+    94.48909% 71.73648%,
+    94.03794% 73.4202%,
+    93.30127% 75%,
+    92.30146% 76.42788%,
+    91.06889% 77.66044%,
+    89.64102% 78.66025%,
+    55% 98.66025%,
+    53.4202% 99.39693%,
+    51.73648% 99.84808%,
+    50% 100%,
+    48.26352% 99.84808%,
+    46.5798% 99.39693%,
+    45% 98.66025%,
+    10.35898% 78.66025%,
+    8.93111% 77.66044%,
+    7.69854% 76.42788%,
+    6.69873% 75%,
+    5.96206% 73.4202%,
+    5.51091% 71.73648%,
+    5.35898% 70%,
+    5.35898% 30%,
+    5.51091% 28.26352%,
+    5.96206% 26.5798%,
+    6.69873% 25%,
+    7.69854% 23.57212%,
+    8.93111% 22.33956%,
+    10.35898% 21.33975%
+  );
+  clip-path: polygon(
+    45% 1.33975%,
+    46.5798% 0.60307%,
+    48.26352% 0.15192%,
+    50% 0%,
+    51.73648% 0.15192%,
+    53.4202% 0.60307%,
+    55% 1.33975%,
+    89.64102% 21.33975%,
+    91.06889% 22.33956%,
+    92.30146% 23.57212%,
+    93.30127% 25%,
+    94.03794% 26.5798%,
+    94.48909% 28.26352%,
+    94.64102% 30%,
+    94.64102% 70%,
+    94.48909% 71.73648%,
+    94.03794% 73.4202%,
+    93.30127% 75%,
+    92.30146% 76.42788%,
+    91.06889% 77.66044%,
+    89.64102% 78.66025%,
+    55% 98.66025%,
+    53.4202% 99.39693%,
+    51.73648% 99.84808%,
+    50% 100%,
+    48.26352% 99.84808%,
+    46.5798% 99.39693%,
+    45% 98.66025%,
+    10.35898% 78.66025%,
+    8.93111% 77.66044%,
+    7.69854% 76.42788%,
+    6.69873% 75%,
+    5.96206% 73.4202%,
+    5.51091% 71.73648%,
+    5.35898% 70%,
+    5.35898% 30%,
+    5.51091% 28.26352%,
+    5.96206% 26.5798%,
+    6.69873% 25%,
+    7.69854% 23.57212%,
+    8.93111% 22.33956%,
+    10.35898% 21.33975%
+  );
+}
+
+.connectionindicator {
+  background-color: #9dc8f1 !important;
+  border: 0 !important;
+  opacity: 0 !important;
+}
+
+.node-container:hover .connectionindicator {
+  opacity: 1 !important;
+}
+
+.node-connected .connectionindicator {
+  opacity: 1 !important;
+}
+
+.react-flow__handle {
+  min-width: 4px !important;
+  width: 4px !important;
+  height: 4px !important;
+  min-height: 4px !important;
+}
+
+.react-flow__handle-right {
+  /* right: -3px !important; */
+  right: 0px !important;
+  top: calc(50% - 8px) !important;
+  transform: none !important;
+
+  /* border-top-right-radius: 1px !important;
+  border-bottom-right-radius: 1px !important; */
+}
+
+.react-flow__handle-left {
+  /* right: -3px !important; */
+  left: 0px !important;
+  top: calc(50% - 8px) !important;
+  transform: none !important;
+
+  /* border-top-right-radius: 1px !important;
+  border-bottom-right-radius: 1px !important; */
+}
+
+.react-flow__handle-left:is(.handle-top-left) {
+  left: 0px !important;
+  top: calc(50% - 1.75rem) !important;
+  transform: none !important;
+}
+
+.react-flow__handle-left:is(.handle-bottom-left) {
+  left: 0px !important;
+  top: 2.75rem !important;
+  transform: none !important;
+}
+
+.react-flow__handle-right:is(.handle-top-right) {
+  right: 0px !important;
+  top: calc(50% - 1.75rem) !important;
+  transform: none !important;
+}
+
+.react-flow__handle-right:is(.handle-bottom-right) {
+  right: 0px !important;
+  top: 2.75rem !important;
+  transform: none !important;
+}
+
+.react-flow__handle-bottom {
+  bottom: calc(0.9rem) !important;
+}
+
+.react-flow__controls.right {
+  @apply !right-12;
+}
+
+.react-flow__controls {
+  @apply !flex !h-6 !flex-row !rounded-full;
+}
+
+.react-flow__controls-button {
+  @apply !h-7 !w-6 !overflow-hidden !border-none !bg-black/30 !text-white;
+}
+
+.react-flow__controls-button:first-child {
+  @apply !w-7.5 rounded-l-full;
+}
+
+.react-flow__controls-button:last-child {
+  @apply !w-7.5 rounded-r-full;
+}
+
+.react-flow__controls-button svg {
+  @apply !brightness-0 !invert !filter;
+}
+
+.reactflow-graph-container {
+  /* height: calc(100% - 147px) !important; */
+}
+
+/* Select button component */
+.selectButton .p-button {
+  @apply !rounded p-2.5;
+}
+
+.selectButton .p-highlight {
+  @apply bg-dark-neutral-gray-400 text-primary-electron-blue-900;
+}
+
+button.underline:focus-visible {
+  @apply rounded-none text-dark-neutral-gray-600 outline outline-1 outline-dark-neutral-gray-900;
+  box-shadow: 0px 0px 2px 2px rgba(161, 164, 176, 0.4) !important;
+}
+
+button:focus-visible {
+  @apply text-dark-neutral-gray-1000 outline outline-1 outline-primary-electron-blue-400;
+  box-shadow: 0px 0px 2px 2px rgba(161, 164, 176, 0.4) !important;
+}
+
+.p-treetable-scrollable-header {
+  background-color: #23282f;
+}
+
+.secondary-pie g text {
+  display: none;
+}

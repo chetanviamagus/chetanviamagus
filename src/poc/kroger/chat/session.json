@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "keywords": [
+        ["slow", "slowly"],
+        ["response", "website", "site", "responds", "respond", "responding", "internet"]
+      ],
+      "graphType": "line",
+      "response": "**Summary:**<br/>This week's Daily Active Users (DAU) have shown a notable increase of 18%compared to last week. This is overloading the mongo atlas cluster deployment in the US-WEST-1 region.<br/><br/>**Detailed Breakdown:**<br/>This Week: 26,000 DAU <span style='color:#9FD356'>(↑18% from the previous week) </span><span class='nbc' data-id='1'>1</span><br/>Last Week: 22,000 DAU <span class='nbc' data-id='2'>2</span><br/><br/>**Key Insights:**<br/>Growth: An <span style='color:#9FD356'>18%</span> increase in DAU compared to last week reflects a growing user base and heightened engagement. This in turn is causing an increased number of queries per second on the Mongo deployment.<br/>Handling more queries in a given time window causes Mongo to reply with increased latencies.  Since your shopping cart feature depends on the results from Mongo Atlas, this is the reason for slow response times on that feature of this project.<br/>\n\n```graph_line\n id-line-1 ~END~ \n```\n\n"
+    },
+    {
+      "keywords": [["how"], ["solve", "debug", "resolve"]],
+      "graphType": "diagram",
+      "response": "**Summary:**<br/>After analyzing the atlas logs, it seems that the most active queries to Atlas happens between 3PM to 5PM PST.  You need to increase the number of replication nodes to be able to service an increased number of queries per minute during these hours.  You can utilize auto-scaling rules to add and remove repicas.<br/><br/><br/>**Detailed Breakdown:**<br/>This Week: 26,000 DAU <span style='color:#9FD356'>(↑18% from the previous week)</span><br/>Last Week: 22,000 DAU<br/>\n\n```diagram\n id-diagram-1 ~END~ \n```\n\n"
+    },
+    {
+      "keywords": [
+        ["auto", "automatic"],
+        ["scaling", "scalability", "scale"]
+      ],
+      "graphType": "codeblock",
+      "response": "**Summary:**<br/>To dynamically increase the number of replication nodes during a given period, you need to adjust the Mongo Atlas auto-scaling rules. To do this progromatticaly only for the duration of the increased DAU, you can create a serverless Lambda function<br/><br/>\n```split_view\n @S1S **What is Lambda?**<br/>Lambda is AWS's serverless compute service, executing code in response to events without server management, billing based on usage.<br/>Shown below is a Lamda function you can deploy to resolve your issue: @S1E @S2S ~~~python\n import boto3\n\ndef lambda_handler(event, context):\n    # Replace 'your-auto-scaling-group-name' with your actual Auto Scaling Group name\n    auto_scaling_group_name = 'your-auto-scaling-group-name'\n\n    # Create an EC2 Auto Scaling client\n    autoscaling_client = boto3.client('autoscaling')\n\n    # Increase desired capacity by 1 (you can adjust the count as needed)\n    response = autoscaling_client.update_auto_scaling_group(\n        AutoScalingGroupName=auto_scaling_group_name,\n        DesiredCapacity=1,\n    )\n\n    # Log the response (optional)\n    print(response)\n\n    return {\n        'statusCode': 200,\n        'body': 'Auto Scaling Group capacity increased successfully!'\n    }\n\n~~~\n\n  @S2E \n```\n\n"
+    },
+    {
+      "keywords": [
+        ["trouble", "pie"],
+        ["ticket", "tickets", "pie"]
+      ],
+      "graphType": "pie",
+      "response": "**Summary:**<br/>The data from ServiceNow suggests that most users are unhappy with the application downtime and availability. In addition, the time taken for new application provisioning has increased quarter over quarter. This increase is related to the growth in the number of users that have been added to the platform in recent years.<br/><br/>\n```split_view\n @S1S **Detailed Downtime Breakdown:**<br/>This Week: 6 hours <span style='color:#F58286'>(112% from the previous week)</span><br/>Last Week: 5 hours<br/><br/>**Key Insights:**<br/>After doing a **sentiment analysis** of the user comments in the trouble tickets, it appears that users are unhappy with how long the applications have been unavailable or inaccessible. A majority of these problems stem from applications running in two of the **EKS** clusters in the **US-WEST** region @S1E @S2S \n~~~graph_pie\n id-pie-1 ~END~ \n~~~\n\n @S2E \n```\n\n"
+    },
+    {
+      "keywords": [
+        ["trouble", "donut", "doughnut"],
+        ["ticket", "tickets", "donut", "doughnut"],
+        ["v2", "donut", "doughnut"]
+      ],
+      "graphType": "doughnut",
+      "response": "**Summary:**<br/>The data from ServiceNow suggests that most users are unhappy with the application downtime and availability. In addition, the time taken for new application provisioning has increased quarter over quarter. This increase is related to the growth in the number of users that have been added to the platform in recent years.<br/><br/>\n```split_view\n @S1S **Detailed Downtime Breakdown:**<br/>This Week: 6 hours <span style='color:#F58286'>(112% from the previous week)</span><br/>Last Week: 5 hours<br/><br/>**Key Insights:**<br/>After doing a **sentiment analysis** of the user comments in the trouble tickets, it appears that users are unhappy with how long the applications have been unavailable or inaccessible. A majority of these problems stem from applications running in two of the **EKS** clusters in the **US-WEST** region @S1E @S2S \n~~~graph_doughnut\n id-pie-1 ~END~ \n~~~\n\n @S2E \n```\n\n"
+    }
+  ]
+}

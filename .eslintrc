@@ -1,0 +1,31 @@
+// .eslintrc file (no extension)
+{
+  "extends": ["react-app"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "react/prefer-es6-class": "error",
+    "react/prefer-stateless-function": "warn",
+    "react/jsx-pascal-case": "error",
+    "react/jsx-closing-tag-location": "error",
+    "react/jsx-closing-bracket-location": "error",
+    "react/jsx-wrap-multilines": "error",
+    "react/self-closing-comp": "error",
+    "no-multi-spaces": "warn",
+    "react/jsx-tag-spacing": "warn",
+    "react/jsx-curly-spacing": "warn",
+    "react/jsx-boolean-value": "warn",
+    // "prop-types-exact": "error",
+    "react/no-string-refs": "error",
+    "react/jsx-no-bind": [
+      "warn",
+      {
+        "ignoreDOMComponents": true,
+        "ignoreRefs": true,
+        "allowArrowFunctions": true,
+        "allowFunctions": false,
+        "allowBind": false
+      }
+    ]
+  }
+}

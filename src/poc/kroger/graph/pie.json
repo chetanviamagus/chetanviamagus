@@ -1,0 +1,35 @@
+{
+  "title": "",
+  "dataset": [
+    {
+      "id": "unavailability",
+      "label": "Unavailability",
+      "value": 105,
+      "color": "#9FD356"
+    },
+    {
+      "id": "performance",
+      "label": "Performance",
+      "value": 60,
+      "color": "#ED1C24"
+    },
+    {
+      "id": "cost",
+      "label": "Cost",
+      "value": 70,
+      "color": "#F2703E"
+    },
+    {
+      "id": "features",
+      "label": "Features",
+      "value": 80,
+      "color": "#53D8FB"
+    },
+    {
+      "id": "provisioning",
+      "label": "Provisioning",
+      "value": 90,
+      "color": "#A67092"
+    }
+  ]
+}

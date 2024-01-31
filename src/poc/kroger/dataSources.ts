@@ -1,0 +1,109 @@
+const dataSources = [
+  {
+    key: "aws",
+    uid: "random-uuid-1",
+    accountNo: "123456789012",
+    username: "IAM : User123",
+    datasourceCount: 1670,
+    assets: "aws_assets_placeholder",
+    data: [
+      {
+        "key": "0",
+        "data": {
+          "name": "RDS"
+        },
+        "children": [
+          {
+            "key": "0-0",
+            "data": {
+              "name": "RDS1",
+              "region": "us-west",
+              "dbType": "MySQL",
+              "schema": "Schema 1: Table 1 | Table2 | Table3..., Schema 2: Table 1 | Table2 | Table3...",
+"telemetry":"AWS CloudWatch",
+              "info": "Some info about RDS1 - Logs"
+            }
+          },
+          {
+            "key": "0-1",
+            "data": {
+              "name": "RDS2",
+              "region": "af-south-1",
+              "dbType": "MySQL",
+              "schema": "Schema 1: Table 1 | Table2 | Table3..., Schema 2: Table 1 | Table2 | Table3...",
+"telemetry":"AWS CloudWatch",
+              "info": "Some info about RDS2 - Logs"
+            }
+          }
+        ]
+      },
+      {
+        "key": "1",
+        "data": {
+          "name": "Dynamo"
+        },
+        "children": [
+          {
+            "key": "1-0",
+            "data": {
+              "name": "Dynamodb1",
+              "region": "ap-east-1",
+              "dbType": "NoSQL",
+              "schema": "Schema 1: Table 1 | Table2 | Table3..., Schema 2: Table 1 | Table2 | Table3...",
+"telemetry":"AWS CloudWatch",
+              "info": "Some info about Dynamodb2"
+            }
+          } 
+        ]
+      },
+      {
+        "key": "2",
+        "data": {
+          "name": "EKS"
+        },
+        "children": [
+          {
+            "key": "2-0",
+            "data": {
+              "name": "Cluster 1 ",
+              "region": "ap-south-2",
+              "dbType": "Kubernetes",
+              "schema": "Cluster Size: 10 | Application Pods 100",
+"telemetry":"AWS CloudWatch, CloudTrail"
+            }
+          }
+        ]
+      },
+      {
+        "key": "3",
+        "data": {
+          "name": "S3"
+        },
+        "children": [
+          {
+            "key": "3-0",
+            "data": {
+              "name": "Bucket1 - CSV",
+              "region": "me-south-1",
+              "dbType": "Object Storage",
+              "schema": "FolderX: Filename1 | Filename2",
+"telemetry":"AWS CloudWatch"
+            }
+          },
+          {
+            "key": "3-1",
+            "data": {
+              "name": "Bucket1 - JSON",
+              "region": "eu-south-2",
+              "dbType": "Object Storage",
+              "schema": "FolderY: Filename1 | Filename2",
+"telemetry":"AWS CloudWatch"
+            }
+          }
+        ]
+      }
+    ],
+  },
+];
+
+export default dataSources;

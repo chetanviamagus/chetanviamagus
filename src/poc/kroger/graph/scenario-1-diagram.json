@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "type": "custom",
+      "data": {
+        "id": "clientApplication",
+        "nodeName": "Client Application",
+        "nodeContent": "pi-desktop",
+        "handlers": [
+          {
+            "type": "source",
+            "position": "Right",
+            "connectionPositionStyles": { "top": "20%" },
+            "id": "clientApplicationRightSideUp"
+          },
+          {
+            "type": "source",
+            "position": "Right",
+            "connectionPositionStyles": { "top": "60%" },
+            "id": "clientApplicationRightSideDown"
+          }
+        ]
+      },
+      "position": { "x": 0, "y": 100 }
+    },
+    {
+      "id": "2",
+      "type": "custom",
+      "data": {
+        "id": "primaryNode",
+        "nodeName": "Primary Node",
+        "nodeContent": "pi-database",
+        "handlers": [
+          {
+            "type": "target",
+            "position": "Left",
+            "connectionPositionStyles": { "top": "20%" },
+            "id": "primaryNodeLeftSideUp"
+          },
+          {
+            "type": "target",
+            "position": "Left",
+            "connectionPositionStyles": { "top": "60%" },
+            "id": "primaryNodeLeftSideDown"
+          },
+          { "type": "source", "position": "Right", "id": "primaryNodeRightSideUp" }
+        ]
+      },
+      "position": { "x": 400, "y": 100 }
+    },
+    {
+      "id": "3",
+      "type": "custom",
+      "data": {
+        "id": "secondaryNode1",
+        "nodeName": "Secondary Node 1",
+        "nodeContent": "pi-database",
+        "handlers": [
+          {
+            "type": "target",
+            "position": "Left",
+            "connectionPositionStyles": { "top": "50%" },
+            "id": "e"
+          }
+        ]
+      },
+      "position": { "x": 800, "y": 0 }
+    },
+    {
+      "id": "4",
+      "type": "custom",
+      "data": {
+        "id": "secondaryNode2",
+        "nodeName": "Secondary Node 2",
+        "nodeContent": "pi-database",
+        "handlers": [
+          {
+            "type": "target",
+            "position": "Left",
+            "connectionPositionStyles": { "top": "50%" },
+            "id": "f"
+          }
+        ]
+      },
+      "position": { "x": 800, "y": 200 }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2-handle-1",
+      "source": "1",
+      "target": "2",
+      "data": {
+        "label": "Read"
+      },
+      "type": "custom",
+      "animated": true,
+      "sourceHandle": "clientApplicationRightSideUp",
+      "targetHandle": "primaryNodeLeftSideUp",
+      "markerEnd": {
+        "type": "arrowclosed",
+        "width": 40,
+        "height": 40,
+        "color": "#00ae45"
+      }
+    },
+    {
+      "id": "e1-2-handle-2",
+      "source": "1",
+      "target": "2",
+      "data": {
+        "label": "Write"
+      },
+      "type": "custom",
+      "animated": true,
+      "sourceHandle": "clientApplicationRightSideDown",
+      "targetHandle": "primaryNodeLeftSideDown",
+      "markerEnd": {
+        "type": "arrowclosed",
+        "width": 40,
+        "height": 40,
+        "color": "#00ae45"
+      }
+    },
+    {
+      "id": "e2-3",
+      "source": "2",
+      "target": "3",
+      "sourceHandle": "primaryNodeRightSideUp",
+      "data": {
+        "label": "Replication"
+      },
+      "type": "custom",
+      "animated": true,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "width": 40,
+        "height": 40,
+        "color": "#00ae45"
+      }
+    },
+    {
+      "id": "e2-4",
+      "source": "2",
+      "target": "4",
+      "sourceHandle": "primaryNodeRightSideUp",
+      "data": {
+        "label": "Replication"
+      },
+      "type": "custom",
+      "animated": true,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "width": 40,
+        "height": 40,
+        "color": "#00ae45"
+      }
+    }
+  ]
+}

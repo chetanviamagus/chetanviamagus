@@ -1,0 +1,139 @@
+export const LOCAL_STORAGE = {
+  USER_INFO: "userInfo",
+  DATASOURCE_LIST: "datasourceList",
+  PROJECT_LIST: "projects",
+};
+
+export const LANGUAGES = {
+  EN: "en",
+  FR: "fr",
+};
+export const LOCALE = {
+  IN: "en-IN",
+  US: "en-US",
+};
+export const DEFAULT_LOCALE_CONST = {
+  LANG: "defaultLanguage",
+  CURRENCY: "defaultCurrency",
+  LOCALE: "defaultLocale",
+};
+export const ROUNDING_MODE = {
+  ROUND: Math.round,
+  FLOOR: Math.floor,
+  CEIL: Math.ceil,
+};
+
+export const INPUT_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+};
+
+export const INPUT_NUMBER_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+};
+
+export const AUTOCOMPLETE_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+};
+
+export const OTP_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+};
+
+export const LABEL_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  RIGHT: "RIGHT",
+};
+
+export const DROPDOWN_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+  TERTIARY: "TERTIARY",
+  QUATERNARY: "QUATERNARY",
+};
+
+export const INPUT_ERROR_TYPE = {
+  BORDER: "BORDER",
+  DEFAULT: "DEFAULT",
+};
+
+export const LIMIT_TYPE = {
+  DAILY: "DAILY",
+  WEEKLY: "WEEKLY",
+  MONTHLY: "MONTHLY",
+};
+
+export const CHECKBOX_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+};
+export const TOAST_VARIANT = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+  TERTIARY: "TERTIARY",
+  QUATERNARY: "QUATERNARY",
+};
+export const TOAST_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+  TERTIARY: "TERTIARY",
+  QUATERNARY: "QUATERNARY",
+};
+
+export const BUTTON_STYLE_TYPE = {
+  PRIMARY: "PRIMARY",
+  SECONDARY: "SECONDARY",
+};
+
+export const COLOR_STYLE_TYPE = {
+  RED: "RED",
+  GRAY: "GRAY",
+  PLUM: "PLUM",
+};
+
+export const LOADER_POSITION = {
+  RIGHT: "right",
+  LEFT: "left",
+};
+export const MIME_TYPE = {
+  JSON: "application/json",
+  PLAIN: "text/plain",
+};
+
+export const IS_ROUTE_GUARD = {
+  Y: "Y",
+  N: "N",
+};
+
+// ENVIRONMENT VARIABLE CONSTANTS
+export const ENV_VAR = {
+  VITE_BASE_API_URL: "VITE_BASE_API_URL",
+  VITE_ENABLE_PWA_MODE: "VITE_ENABLE_PWA_MODE",
+  VITE_LOCAL_DB_NAME: "VITE_LOCAL_DB_NAME",
+  VITE_IS_ACL_ENABLED: "VITE_IS_ACL_ENABLED",
+  VITE_IS_ROUTE_GUARD: "VITE_IS_ROUTE_GUARD",
+  VITE_SHOW_LOGS: "VITE_SHOW_LOGS",
+  VITE_GOOGL_MAP_KEY: "VITE_GOOGL_MAP_KEY",
+  VITE_SHOULD_PERSIST: "VITE_SHOULD_PERSIST",
+  VITE_PERSIST_STORAGE: "VITE_PERSIST_STORAGE",
+  VITE_PERSIST_STORAGE_SECRET: "VITE_PERSIST_STORAGE_SECRET",
+  VITE_MICROSOFT_CLIENT_ID: "VITE_MICROSOFT_CLIENT_ID",
+  VITE_MICROSOFT_TENANT_ID: "VITE_MICROSOFT_TENANT_ID",
+};
+
+export enum PERSIST_STORAGES {
+  INDEX_DB = "INDEX_DB",
+  LOCAL_STORAGE = "LOCAL_STORAGE",
+  SESSION_STORAGE = "SESSION_STORAGE",
+  CUSTOM = "CUSTOM",
+}
+
+export const STEP_STATUS = {
+  ACTIVE: "active",
+  COMPLETED: "completed",
+  PENDING: "pending",
+  FAILED: "failed",
+};

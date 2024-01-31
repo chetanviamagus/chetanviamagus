@@ -1,0 +1,172 @@
+{
+  "dataSources": [
+    {
+      "key": "aws",
+      "uid": "random-uuid-1",
+      "accountNo": "123456789012",
+      "username": "IAM : User123",
+      "datasourceCount": 1670,
+      "assets": "aws_assets_placeholder",
+      "dataSources": [
+        {
+          "key": "0",
+          "data": {
+            "name": "RDS"
+          },
+          "children": [
+            {
+              "key": "0-0",
+              "data": {
+                "name": "RDS1",
+                "region": "us-west",
+                "dbType": "MySQL",
+                "schema": "Schema 1: Table 1 | Table2 | Table3..., Schema 2: Table 1 | Table2 | Table3...",
+"telemetry":"AWS CloudWatch",
+                "info": "Some info about RDS1 - Logs"
+              }
+            },
+            {
+              "key": "0-1",
+              "data": {
+                "name": "RDS2",
+                "region": "af-south-1",
+                "dbType": "MySQL",
+                "schema": "Schema 1: Table 1 | Table2 | Table3..., Schema 2: Table 1 | Table2 | Table3...",
+"telemetry":"AWS CloudWatch",
+                "info": "Some info about RDS2 - Logs"
+              }
+            }
+          ]
+        },
+        {
+          "key": "1",
+          "data": {
+            "name": "Dynamo"
+          },
+          "children": [
+            {
+              "key": "1-0",
+              "data": {
+                "name": "Dynamodb1",
+                "region": "ap-east-1",
+                "dbType": "NoSQL",
+                "schema": "Collections: 7 | Size: 4TB | Shards: 3",
+"telemetry":"AWS CloudWatch, CloudTrail",
+                "info": "Some info about Dynamodb2"
+              }
+            } 
+          ]
+        },
+        {
+          "key": "2",
+          "data": {
+            "name": "EKS"
+          },
+          "children": [
+            {
+              "key": "2-0",
+              "data": {
+                "name": "Cluster 1 ",
+                "region": "ap-south-2",
+                "dbType": "Kubernetes",
+                "schema": "Cluster Size: 10 | Application Pods 100",
+"telemetry":"AWS CloudWatch, CloudTrail"
+              }
+            }
+          ]
+        },
+        {
+          "key": "3",
+          "data": {
+            "name": "S3"
+          },
+          "children": [
+            {
+              "key": "3-0",
+              "data": {
+                "name": "Bucket1 - CSV",
+                "region": "me-south-1",
+                "dbType": "Object Storage",
+                "schema": "FolderX: Filename1 | Filename2",
+"telemetry":"AWS CloudWatch"
+              }
+            },
+            {
+              "key": "3-1",
+              "data": {
+                "name": "Bucket1 - JSON",
+                "region": "eu-south-2",
+                "dbType": "Object Storage",
+                "schema": "FolderY: Filename1 | Filename2",
+"telemetry":"AWS CloudWatch"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "azure",
+      "uid": "random-uuid-2",
+      "accountNo": "AZURE-ACCOUNT-123",
+      "username": "Azure User",
+      "datasourceCount": 500,
+      "assets": "azure_assets_placeholder"
+    },
+    {
+      "key": "gcp",
+      "uid": "random-uuid-3",
+      "accountNo": "GCP-ACCOUNT-123",
+      "username": "GCP User",
+      "datasourceCount": 100,
+      "assets": "gcp_assets_placeholder"
+    }
+  ],
+  "createProject": {
+    "projects": [
+      {
+        "id": 1,
+        "name": "Kroger.com",
+        "description": "Project Tracking and optimizing server performance"
+      }
+    ]
+  },
+  "chat": [
+    {
+      "keywords": [
+        ["slow", "slowly"],
+        ["response", "website", "site", "responds", "respond", "responding", "internet"]
+      ],
+      "graphType": "line",
+      "response": "**Summary:**<br/>This week's Daily Active Users (DAU) have shown a notable increase of 18%compared to last week. This is overloading the mongo atlas cluster deployment in the US-WEST-1 region.<br/><br/>**Detailed Breakdown:**<br/>This Week: 26,000 DAU <span style='color:#9FD356'>(↑18% from the previous week) </span><span class='nbc' data-id='1'>1</span><br/>Last Week: 22,000 DAU <span class='nbc' data-id='2'>2</span><br/><br/>**Key Insights:**<br/>Growth: An <span style='color:#9FD356'>18%</span> increase in DAU compared to last week reflects a growing user base and heightened engagement. This in turn is causing an increased number of queries per second on the Mongo deployment.<br/>Handling more queries in a given time window causes Mongo to reply with increased latencies.  Since your shopping cart feature depends on the results from Mongo Atlas, this is the reason for slow response times on that feature of this project.<br/>\n\n```graph_line\n hjsadfsdf ~END~ \n```\n\n"
+    },
+    {
+      "keywords": [["how"], ["solve", "debug", "resolve"]],
+      "graphType": "diagram",
+      "response": "**Summary:**<br/>After analyzing the atlas logs, it seems that the most active queries to Atlas happens between 3PM to 5PM PST.  You need to increase the number of replication nodes to be able to service an increased number of queries per minute during these hours.  You can utilize auto-scaling rules to add and remove repicas.<br/><br/><br/>**Detailed Breakdown:**<br/>This Week: 26,000 DAU <span style='color:#9FD356'>(↑18% from the previous week)</span><br/>Last Week: 22,000 DAU<br/>\n\n```diagram\n hjsadfsdf ~END~ \n```\n\n"
+    },
+    {
+      "keywords": [
+        ["auto", "automatic"],
+        ["scaling", "scalability", "scale"]
+      ],
+      "graphType": "codeblock",
+      "response": "**Summary:**<br/>To dynamically increase the number of replication nodes during a given period, you need to adjust the Mongo Atlas auto-scaling rules. To do this progromatticaly only for the duration of the increased DAU, you can create a serverless Lambda function<br/><br/>\n```split_view\n @S1S **What is Lambda?**<br/>Lambda is AWS's serverless compute service, executing code in response to events without server management, billing based on usage.<br/>Shown below is a Lamda function you can deploy to resolve your issue: @S1E @S2S ~~~python\n import json\ndef lambda_handler(event, context):\n    # Sample Lambda function to process an event\n    # Extract information from the event\n    event_data = event.get('data', {})\n\n    # Perform some processing\n    result = process_data (event_data)\n    # Return a zesponse\n    response = {\n        'statusCode': 200,\n        'body': json.dumps(C'zesult': result))\n    }\n\n    return response\n\ndef process_data(data):\n    # Sample data processing logic\n    # Replace this with your actual processing logic\n    processed_result = data-get('value', 0) * 2\n    return processed_result\n\n~~~\n\n  @S2E \n```\n\n"
+    },
+    {
+      "keywords": [["trouble"], ["ticket", "tickets"]],
+      "graphType": "pie",
+      "response": "**Summary:**<br/>The data from ServiceNow suggests that most users are unhappy with the application downtime and availability. In addition, the time taken for new application provisioning has increased quarter over quarter. This increase is related to the growth in the number of users that have been added to the platform in recent years.<br/><br/>\n```split_view\n @S1S **Detailed Downtime Breakdown:**<br/>This Week: 6 hours <span style='color:#F58286'>(112% from the previous week)</span><br/>Last Week: 5 hours<br/><br/>**Key Insights:**<br/>After doing a **sentiment analysis** of the user comments in the trouble tickets, it appears that users are unhappy with how long the applications have been unavailable or inaccessible. A majority of these problems stem from applications running in two of the **EKS** clusters in the **US-WEST** region @S1E @S2S \n~~~graph_pie\n hjsadfsdf ~END~ \n~~~\n\n @S2E \n```\n\n"
+    },
+    {
+      "keywords": [["trouble"], ["ticket", "tickets"], ["v2", "donut", "doughnut"]],
+      "graphType": "doughnut",
+      "response": "**Summary:**<br/>The data from ServiceNow suggests that most users are unhappy with the application downtime and availability. In addition, the time taken for new application provisioning has increased quarter over quarter. This increase is related to the growth in the number of users that have been added to the platform in recent years.<br/><br/>\n```split_view\n @S1S **Detailed Downtime Breakdown:**<br/>This Week: 6 hours <span style='color:#F58286'>(112% from the previous week)</span><br/>Last Week: 5 hours<br/><br/>**Key Insights:**<br/>After doing a **sentiment analysis** of the user comments in the trouble tickets, it appears that users are unhappy with how long the applications have been unavailable or inaccessible. A majority of these problems stem from applications running in two of the **EKS** clusters in the **US-WEST** region @S1E @S2S \n~~~graph_doughnut\n hjsadfsdf ~END~ \n~~~\n\n @S2E \n```\n\n"
+    },
+    {
+      "keywords": [["citation"]],
+      "graphType": "citation",
+      "response": "Hello this is a citation <span class='nbc' data-id='Hi Gou'>[1]</span><br/> Lorem kjfhksdhf sdfhdsf sdfhsduf<span class='nbc' data-id='Hi Vinod'>[2]</span> sdfhsdiuf uhsdf"
+    }
+  ]
+}
